@@ -1,0 +1,314 @@
+{
+   "04家__再次挂机OCRClick": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "04领取OCRClick"
+        ]
+    },
+    "04领取OCRClick": {
+        "recognition": "OCR",           
+        "expected": "领取",             
+        "action": "Click",              
+        "next": [
+            "04领取Click__Cancel"
+        ]
+    },
+
+    "04领取Click__Cancel": {                    
+        "action": "Click",              
+        "next": [
+            "04家__卡牌"
+        ]
+    },
+
+"04家__卡牌": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌.png",
+        "roi" : [472,878,91,88],                       
+        "action": "Click",
+        "post_delay":1400,              
+        "next": [
+            "04卡牌__点击四行一列"
+        ]
+    },
+
+"04卡牌__点击四行一列": {                      
+        "action": "Click",
+       "target" : [41,960,89,102],              
+        "next": [
+            "04卡牌__升级",
+            "04卡牌__突破"
+        ]
+    },
+
+    "04卡牌__突破": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_突破.png",
+        "roi" : [457,1081,102,57],                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__突破__确认"
+        ]
+    },
+
+    "04卡牌__突破__确认": {
+        "recognition": "OCR",
+        "expected": "确认",                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__突破__点击空白"
+        ]
+    },
+
+    "04卡牌__突破__点击空白": {                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__升级"
+        ]
+    },
+
+    "04卡牌__升级": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_升级.png",
+        "roi" : [456,1081,105,59],                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__回忆返回"
+        ]
+    },
+    
+    
+
+
+"04卡牌__回忆返回": {
+        "recognition": "OCR",
+        "expected": "回忆",                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__升级返回"
+        ]
+    },
+
+    "04卡牌__升级返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_升级返回.png",
+        "roi" : [53,45,111,62],                        
+        "action": "Click",              
+        "next": [
+            "04家__手机"
+        ]
+    },
+
+    "04家__手机": {
+        "recognition": "TemplateMatch",
+        "template" : "04家__手机.png",
+        "roi" : [322,1061,65,77],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票"
+        ]
+    },
+
+    "04手机__股票": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票.png",
+        "roi" : [39,470,102,94],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股市快讯",
+            "04手机__股票__锤子科技"
+        ]
+    },
+
+    "04手机__股市快讯": {
+        "recognition": "OCR",
+        "expected": "股市快讯",
+        "target" : [263,108,139,62],                       
+        "action": "Click",              
+        "next": [
+            "04手机__股票__锤子科技"
+        ]
+    },
+
+    "04手机__股票__锤子科技": {
+        "recognition": "OCR",           
+        "expected": "锤子科技",             
+        "action": "Click",              
+        "next": [
+            "04手机__股票__买入"
+        ]
+    },
+
+    "04手机__股票__买入": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__买入.png",
+        "roi" : [482,1185,112,62],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__购买"
+        ]
+    },
+
+    "04手机__股票__购买": {
+        "recognition": "OCR",
+        "expected": "购买",                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__确定"
+        ]
+    },
+
+    "04手机__股票__确定": {
+        "recognition": "OCR",
+        "expected": "确定",                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__返回"
+        ]
+    },
+
+    "04手机__股票__返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__返回.png",
+        "roi" : [33,45,62,68],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__再返回"
+        ]
+    },
+
+    "04手机__股票__再返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__返回.png",
+        "roi" : [33,45,62,68],                        
+        "action": "Click",              
+        "next": [
+            "04手机__返回"
+        ]
+    },
+
+    "04手机__返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__返回.png",
+        "roi" : [34,53,58,54],                        
+        "action": "Click",              
+        "next": [
+            "04家__任务"
+        ]
+    },
+
+    
+
+    "04家__任务": {
+        "recognition": "TemplateMatch",
+        "template" : "04家_任务.png",
+        "roi" : [629,287,75,58],                        
+        "action": "Click",
+        "post_delay": 2000,              
+        "next": [
+            "04任务_领取",
+            "04任务_周常任务"
+        ]
+    },
+
+    "04任务_领取": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_领取.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击空白1"
+
+        ]
+    },
+
+    "04任务_点击空白1": {                      
+        "action": "Click",
+        "next": [
+            "04任务_点击奖励盒子1"
+        ]
+    },
+
+    "04任务_点击奖励盒子1": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_点击奖励盒子.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击此处返回1"
+        ]
+    },
+
+    "04任务_点击此处返回1": { 
+        "recognition": "TemplateMatch", 
+        "template" : "04任务_点击此处返回.png",
+        "roi" : [264,1117,195,61],                    
+        "action": "Click",
+        "next": [
+            "04任务_周常任务"
+        ]
+    },
+
+    "04任务_周常任务": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_周常任务.png",
+        "roi" : [280,1112,142,55],                        
+        "action": "Click", 
+        "post_delay": 2000,             
+        "next": [
+            "04任务_周常领取",
+            "04任务__x关闭"
+            
+        ]
+    },
+
+    "04任务_周常领取": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_领取.png",
+        "roi" : [494,505,92,47],                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击空白2"
+        ]
+    },
+
+    "04任务_点击空白2": {                      
+        "action": "Click",
+        "next": [
+            "04任务_点击奖励盒子2"
+        ]
+    },
+
+    "04任务_点击奖励盒子2": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_点击奖励盒子.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击此处返回2",
+            "04任务__x关闭"
+        ]
+    },
+
+    "04任务_点击此处返回2": { 
+        "recognition": "TemplateMatch", 
+        "template" : "04任务_点击此处返回.png",
+        "roi" : [264,1117,195,61],                    
+        "action": "Click",
+        "next": [
+            "04任务__x关闭"
+        ]
+    },
+
+    "04任务__x关闭": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_关闭x.png",
+        "roi" : [576,165,81,74],                        
+        "action": "Click",              
+        "next": [
+            
+        ]
+    }
+
+
+
+}

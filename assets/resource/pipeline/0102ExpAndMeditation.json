@@ -1,0 +1,154 @@
+{
+    "01挂机OCRClick": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "01领取OCRClick"
+        ]
+    },
+
+    "01领取OCRClick": {
+        "recognition": "OCR",           
+        "expected": "领取",             
+        "action": "Click",              
+        "next": [
+            "01领取Click__Cancel"
+        ]
+    },
+
+    "01领取Click__Cancel": {                    
+        "action": "Click",              
+        "next": [
+            "01挂机OCRClick__Second"
+        ]
+    },
+
+    "01挂机OCRClick__Second": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "01快速挂机OCRClick"
+        ]
+    },
+
+    "01快速挂机OCRClick": {
+        "recognition": "OCR",           
+        "expected": "快速挂机",             
+        "action": "Click",              
+        "next": [
+            "01免费领取OCRClick",
+            "01使用___取消"
+        ]
+    },
+
+    "01免费领取OCRClick": {
+        "recognition": "OCR",           
+        "expected": "免费领取",             
+        "action": "Click",              
+        "next": [
+            "01点击此处返回OCRClick"
+        ]
+    },
+
+    "01点击此处返回OCRClick": {
+        "recognition": "OCR",           
+        "expected": "点击此处返回",             
+        "action": "Click",              
+        "next": [
+            "01点击空白返回Click__Cancel"
+        ]
+    },
+
+    "01点击空白返回Click__Cancel": {        
+        "action": "Click",              
+        "next": [
+            "02冥想Click"
+        ]
+    },
+
+    "01使用___取消": { 
+        "recognition": "OCR",
+        "roi" : [373,758,67,41],
+        "expected": "使用",
+        "target": [296,1084,138,72],       
+        "action": "Click",              
+        "next": [
+            "02冥想Click"
+        ]
+    },
+
+    "02冥想Click": {
+        "recognition": "TemplateMatch",
+        "template" : "02冥想.png",
+        "roi" : [391,961,91,89],                     
+        "action": "Click",
+        "target" : [399,961,79,87],              
+        "next": [
+            "02冥想界面swipe"
+        ]
+    },
+    
+    "02冥想界面swipe": {
+        "recognition":"TemplateMatch",
+        "template" : "02冥想_抽奖券.png",
+        "roi" : [322,51,57,55],                      
+        "action": "Swipe",
+        "begin" : [129,985,1,1],
+        "end" : [471,985,1,1],               
+        "next": [
+            "02冥想返回Click"
+        ]
+    },
+
+    "02点击普池Click": {                      
+        "action": "Click",
+        "target" : [102,958,94,67],
+        "post_delay": 750,            
+        "next": [
+            "02免费回忆Click"
+        ]
+    },
+
+    "02免费回忆Click": {                      
+        "action": "Click",
+        "target": [96,1097,191,48],
+        "post_delay":500,              
+        "next": [
+            "02跳过Click"
+        ]
+    },
+
+    "02跳过Click": {                      
+        "action": "Click",
+        "target": [620,43,42,57],              
+        "next": [
+            "02点击任意区域返回Click"
+        ]
+    },
+
+    "02点击任意区域返回Click": {
+        "recognition": "TemplateMatch",                      
+        "template" : "02点击任意区域返回.png",
+        "action": "Click",
+        "target": [310,1147,109,55],              
+        "next": [
+            "02冥想返回Click"
+        ]
+    },
+
+    "02冥想返回Click": {
+        "recognition": "TemplateMatch",
+        "template" : "02冥想返回.png",                        
+        "action": "Click",              
+        "next": [
+            "03外出Click"
+        ]
+    }
+
+
+
+
+
+}

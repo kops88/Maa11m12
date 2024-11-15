@@ -1,0 +1,109 @@
+{
+   "03城市__右移1": {
+        "recognition": "OCR",
+        "expected": "白鸥的家",                     
+        "action": "Swipe",
+        "begin" : [606,996,1,1],
+        "end" : [166,1010,1,1],
+        "next": [
+            "03城市__右移2"
+        ]
+    },
+
+    "03城市__右移2": {                      
+        "action": "Swipe",
+        "begin" : [548,863,1,1],
+        "end" : [189,879,1,1],
+        "next": [
+            "03城市__右移3"
+        ]
+    },
+    
+    "03城市__右移3": {                      
+        "action": "Swipe",
+        "begin" : [548,863,1,1],
+        "end" : [189,879,1,1],
+        "next": [
+            "03城市__右移4"
+        ]
+    },
+
+    "03城市__右移4": {                      
+        "action": "Swipe",
+        "begin" : [548,863,1,1],
+        "end" : [189,879,1,1],
+        "next": [
+            "03城市__寺庙"
+        ]
+    },
+
+    "03城市__寺庙": {
+        "recognition": "OCR",           
+        "expected": "寺庙",             
+        "action": "Click",              
+        "next": [
+            "03寺庙__抽签"
+        ]
+    },
+
+    "03寺庙__抽签": {
+        "recognition": "OCR",           
+        "expected": "抽签",             
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "03寺庙__抽签__点击触发"
+        ]
+    },
+
+    "03寺庙__抽签__点击触发": {                      
+        "action": "Click",
+        "target": [316,628,99,104],
+        "post_delay":8000,
+        "next": [
+            "03寺庙__抽签_点击空白"
+        ]
+    },
+    
+
+    "03寺庙__抽签_点击空白": {                      
+        "action": "Click",
+        "target": [186,581,67,48],            
+        "next": [
+            "03寺庙__返回"
+        ]
+    },
+
+    "03寺庙__返回": {
+        "recognition": "TemplateMatch",
+        "template" : "03寺庙_返回.png",
+        "roi" : [46,38,116,77],                        
+        "action": "Click",              
+        "next": [
+            "03城市__返回"
+        ]
+    },
+
+    "03城市__返回": {
+        "recognition": "OCR",
+        "expected" : "夏冰的家",
+        "target":[35,55,64,49],                        
+        "action": "Click",
+        "post_delay": 3000,              
+        "next": [
+            "04家__再次挂机OCRClick",
+            "03__家__爬塔后限时礼包"
+        ]
+    },
+    
+    "03__家__爬塔后限时礼包": {
+        "recognition": "TemplateMatch",
+        "template" : "03__家__爬塔后限时礼包.png",
+        "roi" : [638,279,49,55],                        
+        "action": "Click",              
+        "next": [
+            "04家__再次挂机OCRClick"
+        ]
+    }
+
+}
