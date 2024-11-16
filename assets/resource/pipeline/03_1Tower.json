@@ -1,14 +1,20 @@
 {
-   "03外出Click": {
-        "recognition": "TemplateMatch",
-        "template" : "03外出C.png",                        
-        "action": "Click",              
+    "03外出": {                           
         "next": [
-            "03巅峰之塔"
+            "03家__外出"
         ]
     },
 
-    "03巅峰之塔": {
+   "03家__外出": {
+        "recognition": "TemplateMatch",
+        "template" : "03家__外出.png",                        
+        "action": "Click",              
+        "next": [
+            "03家__外出__巅峰之塔"
+        ]
+    },
+
+    "03家__外出__巅峰之塔": {
         "recognition": "OCR",           
         "expected": "巅峰之塔",             
         "action": "Click",              
@@ -19,7 +25,7 @@
 
     "03巅峰之塔__挑战": {
         "recognition": "TemplateMatch",
-        "template" : "03挑战.png",                        
+        "template" : "03巅峰之塔__挑战.png",                        
         "action": "Click",              
         "next": [
             "03巅峰之塔__开始"
@@ -30,68 +36,54 @@
         "recognition": "TemplateMatch",
         "template" : "03巅峰之塔_开始.png",                        
         "action": "Click",
-        "post_delay": 2000,
-        "post_wait_freezes": 5000,        
+        "post_delay": 5000,      
         "next": [
-            "03巅峰之塔__开始__手动",
-            "03巅峰之塔__开始__x1"
+            "03巅峰之塔__战斗__手动",
+            "03巅峰之塔__战斗__x1"
         ],
         "timeout":5000,
-        "on_error":"03战斗__等待"
+        "on_error":"03巅峰之塔__战斗__等待"
 
     },
 
-    "03巅峰之塔__开始__手动": {
+    "03巅峰之塔__战斗__手动": {
         "recognition": "TemplateMatch",
-        "template" : "03战斗_手动.png",                        
+        "template" : "03巅峰之塔__战斗__手动.png",                        
         "action": "Click",              
         "next": [
-            "03巅峰之塔__开始__x1",
-            "03战斗__等待"
+            "03巅峰之塔__战斗__x1",
+            "03巅峰之塔__战斗__等待"
         ]
     },
 
-    "03巅峰之塔__开始__x1": {
+    "03巅峰之塔__战斗__x1": {
         "recognition": "TemplateMatch",
-        "template" : "03战斗_x1.png",
+        "template" : "03巅峰之塔__战斗__x1.png",
         "roi" : [652,1115,61,45],                        
         "action": "Click",              
         "next": [
-            "03巅峰之塔__开始__手动",
-            "03战斗__等待"
+            "03巅峰之塔__战斗__手动",
+            "03巅峰之塔__战斗__等待"
         ]
     },
 
-    "03战斗__等待": {
+    "03巅峰之塔__战斗__等待": {
         "recognition": "TemplateMatch",
-        "template" : "03战斗_等待.png",                        
+        "template" : "03巅峰之塔__战斗__等待.png",                        
         "action": "DoNothing",
         "rate_limit":3000,
         "timeout": 240000, 
         "pre_delay": 500,             
         "next": [
-            "03战斗_失败",
-            "03战斗_胜利"
+            "03巅峰之塔__战斗_结束"
         ]
     },
 
-    "03战斗_失败": {
+    "03巅峰之塔__战斗_结束": {
         "recognition": "TemplateMatch",
-        "template" : "03战斗_失败.png", 
+        "template" : "03巅峰之塔__战斗_结束.png", 
         "roi" : [271,1205,181,47],                       
         "action": "Click",
-        "post_wait_freezes":5000,              
-        "next": [
-            "03巅峰之塔__返回"
-        ]
-    },
-    
-    "03战斗_胜利": {
-        "recognition": "TemplateMatch",
-        "template" : "03战斗_胜利.png", 
-        "roi" : [221,211,293,183],                       
-        "action": "Click",
-        "target":[266,1129,156,67],
         "post_wait_freezes":5000,              
         "next": [
             "03巅峰之塔__返回"
@@ -103,30 +95,28 @@
         "template" : "03巅峰之塔_返回.png",                        
         "action": "Click",              
         "next": [
-            "03城市__左移1"
+            "03家__外出__左移"
         ]
     },
 
-    "03城市__左移1": {
+    "03家__外出__左移": {
         "recognition": "OCR",  
         "expected": "巅峰之塔",                   
         "action": "Swipe",
         "begin" : [193,1002,1,1],
         "end" : [663,997,1,1],
         "next": [
-            "03城市__左移2"
+            "03家__外出__左移2"
         ]
     },
 
-    "03城市__左移2": {                      
+    "03家__外出__左移2": {                      
         "action": "Swipe",
         "begin" : [189,1087,1,1],
         "end" : [537,1096,1,1],
         "next": [
-            "03城市__白鸥的家"
+            "03外出__白鸥的家"
         ]
     }
-
-    
 
 }

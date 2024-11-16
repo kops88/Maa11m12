@@ -1,0 +1,127 @@
+{
+
+    "04__3任务领取": {                           
+        "next": [
+            "04家__任务"
+        ]
+    },
+
+    "04家__任务": {
+        "recognition": "TemplateMatch",
+        "template" : "04家_任务.png",
+        "roi" : [629,287,75,58],                        
+        "action": "Click",
+        "post_delay": 2000,              
+        "next": [
+            "04任务_领取",
+            "04任务_周常任务"
+        ]
+    },
+
+    "04任务_领取": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_领取.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击空白"
+
+        ]
+    },
+
+    "04任务_点击空白": {                      
+        "action": "Click",
+        "next": [
+            "04任务_点击奖励盒子"
+        ]
+    },
+
+    "04任务_点击奖励盒子": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_点击奖励盒子.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击此处返回"
+        ]
+    },
+
+    "04任务_点击此处返回": { 
+        "recognition": "TemplateMatch", 
+        "template" : "04任务_点击此处返回.png",
+        "roi" : [264,1117,195,61],             
+        "pre_delay": 750,       
+        "action": "Click",
+        "next": [
+            "04任务_周常任务"
+        ]
+    },
+
+    "04任务_周常任务": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_周常任务.png",
+        "roi" : [280,1112,142,55],                        
+        "action": "Click", 
+        "post_delay": 2000,             
+        "next": [
+            "04任务_周常领取",
+            "04任务__x关闭"
+            
+        ]
+    },
+
+    "04任务_周常领取": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_领取.png",
+        "roi" : [494,505,92,47],                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击空白2"
+        ]
+    },
+
+    "04任务_点击空白2": {                      
+        "action": "Click",
+        "next": [
+            "04任务_点击奖励盒子2"
+        ]
+    },
+
+    "04任务_点击奖励盒子2": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_点击奖励盒子.png",                        
+        "action": "Click",              
+        "next": [
+            "04任务_点击此处返回2",
+            "04任务__x关闭"
+        ]
+    },
+
+    "04任务_点击此处返回2": { 
+        "recognition": "TemplateMatch", 
+        "template" : "04任务_点击此处返回.png",
+        "roi" : [264,1117,195,61],
+        "pre_delay":750,                    
+        "action": "Click",
+        "next": [
+            "04任务__x关闭"
+        ]
+    },
+
+    "04任务__x关闭": {
+        "recognition": "TemplateMatch",
+        "template" : "04任务_关闭x.png",
+        "roi" : [576,165,81,74],                        
+        "action": "Click",              
+        "next": [
+            "04__3TaskClaim__Complelt"
+        ]
+    },
+
+    "04__3TaskClaim__Complelt": {                           
+        "next": [
+
+        ]
+    }
+
+
+
+}

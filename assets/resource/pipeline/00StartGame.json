@@ -1,0 +1,93 @@
+{
+    "00启动游戏": {                           
+        "next": [
+            "00奇点时代Start"
+        ]
+    },
+
+    "00奇点时代Start": {
+        "recognition": "OCR",           
+        "expected": "奇点时代",             
+        "action": "Click",
+        "post_delay": 30000,              
+        "next": [
+        "00登入__点击屏幕进入"
+        ]
+    },
+    "00登入__点击屏幕进入": {
+        "recognition": "TemplateMatch", 
+        "template" : "00登入__点击屏幕进入.png",
+        "recommended roi" : [218,1094,282,59],
+        "action": "Click",
+        "post_delay": 7500,              
+        "next": [
+        "00登入__限时up活动__点击跳过",
+       "00登入__白鸥首冲x",
+       "00登入__公告x",
+       "00登入__限时up活动__点击空白返回"
+        ]
+    },
+    "00登入__公告x": {
+        "recognition": "TemplateMatch",
+        "template" :"00登入__公告x.png",
+        "roi" : [582,170,72,69],                        
+        "action": "Click",              
+        "next": [
+        "00登入__限时up活动__点击跳过",
+        "00登入__限时up活动__点击空白返回",
+        "00登入__白鸥首冲x",
+        "00登入__主界面ready"    
+        ]
+    },
+
+    "00登入__限时up活动__点击跳过": {
+        "recognition": "TemplateMatch",
+        "template" : "00登入__限时up活动__点击跳过.png",
+        "roi" : [625,28,72,89],                     
+        "action": "Click",              
+        "next": [
+        "00登入__公告x",
+        "00登入__限时up活动__点击空白返回",
+        "00登入__主界面ready"
+        ]
+    },
+
+    "00登入__限时up活动__点击空白返回": {
+        "recognition": "OCR",           
+        "expected": "点击空白返回",
+        "roi" : [238,1144,241,74],             
+        "action": "Click",              
+        "next": [
+        "00登入__限时up活动__点击跳过",
+        "00登入__白鸥首冲x",
+        "00登入__公告x",
+        "00登入__主界面ready"
+        ]
+    },
+    "00登入__白鸥首冲x": {
+        "recognition": "TemplateMatch",
+        "template" : "00登入__白鸥首冲x.png",
+        "roi" : [596,80,91,87],                        
+        "action": "Click",              
+        "next": [
+        "00登入__公告x",
+        "00登入__主界面ready"
+        ]
+    },
+
+   
+
+    "00登入__主界面ready": {                              
+        "next": [
+            "00登入__公告x",
+            "00登入__限时up活动__点击空白返回",
+            "00Start__Complete"
+        ]
+    },
+
+    "00Start__Complete":{
+        "next":[
+
+        ]
+    }
+}

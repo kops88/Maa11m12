@@ -1,0 +1,92 @@
+{
+    "01挂机经验获取": {                           
+        "next": [
+            "01家__挂机"
+        ]
+    },
+
+    "01家__挂机": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "01家__挂机__领取"
+        ]
+    },
+
+    "01家__挂机__领取": {
+        "recognition": "OCR",           
+        "expected": "领取",             
+        "action": "Click",              
+        "next": [
+            "01家__挂机__blank"
+        ]
+    },
+
+    "01家__挂机__blank": {                    
+        "action": "Click",
+        "target" : [109,1206,69,38],             
+        "next": [
+            "01家__挂机__Second",
+            "01家__挂机__blank"
+        ]
+    },
+
+    "01家__挂机__Second": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "01家__挂机__快速挂机"
+        ]
+    },
+
+    "01家__挂机__快速挂机": {
+        "recognition": "OCR",           
+        "expected": "快速挂机",             
+        "action": "Click",              
+        "next": [
+            "01家__挂机__免费领取",
+            "01家__挂机__使用则取消"
+        ]
+    },
+
+    "01家__挂机__免费领取": {
+        "recognition": "OCR",           
+        "expected": "免费领取",             
+        "action": "Click",              
+        "next": [
+            "01家__挂机__blank2"
+        ]
+    },
+
+    "01家__挂机__blank2": {                    
+        "action": "Click",
+        "target" : [109,1206,69,38],             
+        "next": [
+            "01ExpClaim__Complete",
+            "01家__挂机__blank2"
+        ]
+    },
+
+
+    "01家__挂机__使用则取消": { 
+        "recognition": "OCR",
+        "roi" : [373,758,67,41],
+        "expected": "使用",
+        "target": [296,1084,138,72],       
+        "action": "Click",              
+        "next": [
+            "01ExpClaim__Complete",
+            "01家__挂机__使用则取消"
+        ]
+    },
+
+    "01ExpClaim__Complete":{
+        "recognition":"TemplateMatch",
+        "template":"02家__冥想.png",
+        "next":[
+
+        ]
+    }
+}

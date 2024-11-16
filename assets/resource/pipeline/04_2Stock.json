@@ -1,0 +1,112 @@
+{
+    "04__2股票购买": {                           
+        "next": [
+            "04家__手机"
+        ]
+    },
+
+    "04家__手机": {
+        "recognition": "TemplateMatch",
+        "template" : "04家__手机.png",
+        "roi" : [322,1061,65,77],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票"
+        ]
+    },
+
+    "04手机__股票": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票.png",
+        "roi" : [39,470,102,94],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__股市快讯",
+            "04手机__股票__锤子科技"
+        ]
+    },
+
+    "04手机__股票__股市快讯": {
+        "recognition": "OCR",
+        "expected": "股市快讯",
+        "target" : [263,108,139,62],                       
+        "action": "Click",              
+        "next": [
+            "04手机__股票__锤子科技"
+        ]
+    },
+
+    "04手机__股票__锤子科技": {
+        "recognition": "OCR",           
+        "expected": "锤子科技",             
+        "action": "Click",              
+        "next": [
+            "04手机__股票__买入"
+        ]
+    },
+
+    "04手机__股票__买入": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__买入.png",
+        "roi" : [482,1185,112,62],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__购买"
+        ]
+    },
+
+    "04手机__股票__购买": {
+        "recognition": "OCR",
+        "expected": "购买",                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__确定"
+        ]
+    },
+
+    "04手机__股票__确定": {
+        "recognition": "OCR",
+        "expected": "确定",                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__返回"
+        ]
+    },
+
+    "04手机__股票__返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__返回.png",
+        "roi" : [33,45,62,68],                        
+        "action": "Click",              
+        "next": [
+            "04手机__股票__再返回"
+        ]
+    },
+
+    "04手机__股票__再返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__股票__返回.png",
+        "roi" : [33,45,62,68],                        
+        "action": "Click",              
+        "next": [
+            "04手机__返回"
+        ]
+    },
+
+    "04手机__返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04手机__返回.png",
+        "roi" : [34,53,58,54],                        
+        "action": "Click",              
+        "next": [
+            "04__2Stock__Complete"
+        ]
+    },
+
+    "04__2Stock__Complete": {                           
+        "next": [
+
+        ]
+    }
+
+}

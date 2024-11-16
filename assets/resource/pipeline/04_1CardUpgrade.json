@@ -1,0 +1,131 @@
+{
+
+    "04_1升级卡牌": {                           
+        "next": [
+            "04家__爬塔后限时礼包",
+            "04家__再次挂机"
+        ]
+    },
+
+    "04家__爬塔后限时礼包": {
+        "recognition": "TemplateMatch",
+        "template" : "04家__爬塔后限时礼包.png",
+        "roi" : [638,279,49,55],                        
+        "action": "Click",              
+        "next": [
+            "04家__再次挂机"
+        ]
+    },
+
+   "04家__再次挂机": {
+        "recognition": "OCR",           
+        "expected": "挂机",             
+        "action": "Click",              
+        "next": [
+            "04挂机__领取"
+        ]
+    },
+    "04挂机__领取": {
+        "recognition": "OCR",           
+        "expected": "领取",             
+        "action": "Click",              
+        "next": [
+            "04领取__blank"
+        ]
+    },
+
+    "04领取__blank": {                    
+        "action": "Click", 
+        "target" : [109,1206,69,38],             
+        "next": [
+            "04家__卡牌",
+            "04领取__blank"
+        ]
+    },
+
+"04家__卡牌": {
+        "recognition": "TemplateMatch",
+        "template" : "04家__卡牌.png",
+        "roi" : [472,878,91,88],                       
+        "action": "Click",
+        "post_delay":1400,              
+        "next": [
+            "04卡牌__点击四行一列"
+        ]
+    },
+
+"04卡牌__点击四行一列": {                      
+        "action": "Click",
+       "target" : [41,960,89,102],              
+        "next": [
+            "04卡牌__升级",
+            "04卡牌__突破"
+        ]
+    },
+
+    "04卡牌__突破": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_突破.png",
+        "roi" : [457,1081,102,57],                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__突破__确认"
+        ]
+    },
+
+    "04卡牌__突破__确认": {
+        "recognition": "OCR",
+        "expected": "确认",                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__突破__点击空白"
+        ]
+    },
+
+    "04卡牌__突破__点击空白": {                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__升级"
+        ]
+    },
+
+    "04卡牌__升级": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_升级.png",
+        "roi" : [456,1081,105,59],                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__回忆返回"
+        ]
+    },
+    
+    
+
+
+"04卡牌__回忆返回": {
+        "recognition": "OCR",
+        "expected": "回忆",                        
+        "action": "Click",              
+        "next": [
+            "04卡牌__升级返回"
+        ]
+    },
+
+    "04卡牌__升级返回": {
+        "recognition": "TemplateMatch",
+        "template" : "04卡牌_升级返回.png",
+        "roi" : [53,45,111,62],                        
+        "action": "Click",              
+        "next": [
+            "04__1CardUpGrade__Complete"
+        ]
+    },
+
+    "04__1CardUpGrade__Complete": {                           
+        "next": [
+
+        ]
+    }
+
+
+}
