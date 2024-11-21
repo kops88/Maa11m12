@@ -1,94 +1,112 @@
 {
     "03外出__白鸥的家": {
-        "recognition": "OCR",           
-        "expected": "白鸥的家",             
-        "action": "Click",              
+        "recognition": "OCR",
+        "expected": "白鸥的家",
+        "action": "Click",
         "next": [
             "03白鸥的家__装扮"
         ]
     },
-
     "03白鸥的家__装扮": {
         "recognition": "TemplateMatch",
-        "template" : "03白鸥的家_装扮.png",
-        "roi" : [539,817,181,88] ,                       
-        "action": "Click",              
+        "template": "03白鸥的家_装扮.png",
+        "roi": [
+            539,
+            817,
+            181,
+            88
+        ],
+        "action": "Click",
         "next": [
             "03白鸥的家__装扮__换装"
         ]
     },
-
     "03白鸥的家__装扮__换装": {
         "recognition": "TemplateMatch",
-        "template" : "03白鸥的家__装扮__换装.png",
-        "roi" : [575,1025,108,84],                     
-        "action": "Click",              
+        "template": "03白鸥的家__装扮__换装.png",
+        "roi": [
+            575,
+            1025,
+            108,
+            84
+        ],
+        "action": "Click",
         "next": [
             "03白鸥的家__装扮__为他推荐"
         ]
     },
-
     "03白鸥的家__装扮__为他推荐": {
         "recognition": "TemplateMatch",
-        "template" : "03白鸥的家__装扮__为他推荐.png",
-        "roi" : [555,1169,141,77],                      
+        "template": "03白鸥的家__装扮__为他推荐.png",
+        "roi": [
+            555,
+            1169,
+            141,
+            77
+        ],
         "action": "Click",
-        "target":[566,1176,125,84], 
-        "post_delay":2500,             
+        "target": [
+            566,
+            1176,
+            125,
+            84
+        ],
+        "post_delay": 2500,
         "next": [
             "03装扮__天生滤镜_blank",
             "03装扮__已经推荐过了"
         ]
     },
-
     "03装扮__天生滤镜_blank": {
         "recognition": "TemplateMatch",
-        "template" : "03装扮__天生滤镜.png",
-        "roi" : [508,726,42,128],                      
+        "template": "03装扮__天生滤镜.png",
+        "roi": [
+            508,
+            726,
+            42,
+            128
+        ],
         "action": "Click",
-        "post_delay":2500,             
+        "post_delay": 2500,
         "next": [
             "03装扮__为他推荐_blank2"
         ]
     },
-
-    "03装扮__为他推荐_blank2": {                      
+    "03装扮__为他推荐_blank2": {
         "action": "Click",
-        "post_delay":2500,             
+        "post_delay": 2500,
         "next": [
             "03白鸥的家__装扮返回"
         ]
     },
-
     "03装扮__已经推荐过了": {
         "recognition": "TemplateMatch",
-        "template" : "03白鸥的家__装扮__为他推荐.png",
-        "roi" : [555,1169,141,77],                         
-        "action": "DoNothing",              
+        "template": "03白鸥的家__装扮__为他推荐.png",
+        "roi": [
+            555,
+            1169,
+            141,
+            77
+        ],
+        "action": "DoNothing",
         "next": [
             "03白鸥的家__装扮返回"
         ]
     },
-
     "03白鸥的家__装扮返回": {
-        "recognition": "OCR",           
-        "expected": "装扮",             
-        "action": "Click",              
+        "recognition": "OCR",
+        "expected": "装扮",
+        "action": "Click",
         "next": [
             "03白鸥的家__返回"
         ]
     },
-
     "03白鸥的家__返回": {
-        "recognition": "OCR",           
-        "expected": "白鸥的家",             
-        "action": "Click",              
+        "recognition": "OCR",
+        "expected": "白鸥的家",
+        "action": "Click",
         "next": [
             "03外出__右移"
         ]
     }
-
-   
-    
-
 }

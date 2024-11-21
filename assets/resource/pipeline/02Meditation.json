@@ -1,98 +1,132 @@
 {
-    "02免费冥想一次": {                           
+    "02免费冥想一次": {
         "next": [
             "02家__冥想"
         ]
     },
-
     "02家__冥想": {
         "recognition": "TemplateMatch",
-        "template" : "02家__冥想.png",
-        "roi" : [391,961,91,89],                     
+        "template": "02家__冥想.png",
+        "roi": [
+            391,
+            961,
+            91,
+            89
+        ],
         "action": "Click",
-        "target" : [399,961,79,87],              
+        "target": [
+            399,
+            961,
+            79,
+            87
+        ],
         "next": [
             "02家__冥想__swipe"
         ]
     },
-    
     "02家__冥想__swipe": {
-        "recognition":"TemplateMatch",
-        "template" : "02冥想_抽奖券.png",
-        "roi" : [322,51,57,55],                      
+        "recognition": "TemplateMatch",
+        "template": "02冥想_抽奖券.png",
+        "roi": [
+            322,
+            51,
+            57,
+            55
+        ],
         "action": "Swipe",
-        "begin" : [129,985,1,1],
-        "end" : [471,985,1,1], 
-        "post_delay": 750,              
+        "begin": [
+            129,
+            985,
+            1,
+            1
+        ],
+        "end": [
+            471,
+            985,
+            1,
+            1
+        ],
+        "post_delay": 750,
         "next": [
             "02家__冥想__普池"
         ]
     },
-
-    "02家__冥想__普池": {                      
+    "02家__冥想__普池": {
         "action": "Click",
-        "target" : [102,958,94,67],
-        "post_delay": 1000,            
+        "target": [
+            102,
+            958,
+            94,
+            67
+        ],
+        "post_delay": 1000,
         "next": [
             "02普池_不免费",
             "02普池_免费"
         ]
     },
-
     "02普池_不免费": {
-        "recognition":"TemplateMatch",
-        "template" : "02普池_不免费.png",
-        "roi" : [71,1095,98,52],                      
-        "action": "DoNothing",              
+        "recognition": "TemplateMatch",
+        "template": "02普池_不免费.png",
+        "roi": [
+            71,
+            1095,
+            98,
+            52
+        ],
+        "action": "DoNothing",
         "next": [
             "02家__冥想__返回"
         ]
     },
-
-    "02普池_免费": {                      
+    "02普池_免费": {
         "action": "Click",
-        "target": [96,1097,191,48],
-        "post_delay":750,              
+        "target": [
+            96,
+            1097,
+            191,
+            48
+        ],
+        "post_delay": 750,
         "next": [
             "02普池_抽卡__跳过"
         ]
     },
-
-    "02普池_抽卡__跳过": {                      
+    "02普池_抽卡__跳过": {
         "action": "Click",
-        "target": [620,43,42,57],              
+        "target": [
+            620,
+            43,
+            42,
+            57
+        ],
         "next": [
             "02普池_抽卡__点击任意区域返回"
         ]
     },
-
     "02普池_抽卡__点击任意区域返回": {
-        "recognition": "TemplateMatch",                      
-        "template" : "02普池_抽卡__点击任意区域返回.png",
+        "recognition": "TemplateMatch",
+        "template": "02普池_抽卡__点击任意区域返回.png",
         "action": "Click",
-        "target": [310,1147,109,55],              
+        "target": [
+            310,
+            1147,
+            109,
+            55
+        ],
         "next": [
             "02家__冥想__返回"
         ]
     },
-
     "02家__冥想__返回": {
         "recognition": "TemplateMatch",
-        "template" : "02家__冥想__返回.png",                        
-        "action": "Click",              
+        "template": "02家__冥想__返回.png",
+        "action": "Click",
         "next": [
-        "02Meditation__Complete"
+            "02Meditation__Complete"
         ]
     },
-
-    "02Meditation__Complete": {                           
-        "next": [
-            
-        ]
+    "02Meditation__Complete": {
+        "next": []
     }
-
-
-
-
-
 }

@@ -1,0 +1,49 @@
+{
+    "controller": {
+        "name": "安卓端"
+    },
+    "resource": "官服",
+    "task": [
+        {
+            "name": "启动游戏",
+            "option": []
+        },
+        {
+            "name": "挂机经验获取",
+            "option": []
+        },
+        {
+            "name": "免费冥想一次",
+            "option": []
+        },
+        {
+            "name": "外出",
+            "option": []
+        },
+        {
+            "name": "升级卡牌",
+            "option": []
+        },
+        {
+            "name": "股票购买",
+            "option": []
+        },
+        {
+            "name": "任务领取",
+            "option": []
+        }
+    ],
+    "adb": {
+        "adb_path": "D:/AppBox/MuMu Player 12/shell/adb.exe",
+        "address": "127.0.0.1:16384",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 0,
+                    "path": "D:/AppBox/MuMu Player 12"
+                }
+            }
+        }
+    }
+}

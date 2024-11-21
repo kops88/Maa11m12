@@ -1,112 +1,154 @@
 {
-   "03外出__右移": {
+    "03外出__右移": {
         "recognition": "OCR",
-        "expected": "白鸥的家",                     
+        "expected": "白鸥的家",
         "action": "Swipe",
-        "begin" : [606,996,1,1],
-        "end" : [166,1010,1,1],
+        "begin": [
+            606,
+            996,
+            1,
+            1
+        ],
+        "end": [
+            166,
+            1010,
+            1,
+            1
+        ],
         "next": [
             "03外出__右移2"
         ]
     },
-
-    "03外出__右移2": {                      
+    "03外出__右移2": {
         "action": "Swipe",
-        "begin" : [548,863,1,1],
-        "end" : [189,879,1,1],
+        "begin": [
+            548,
+            863,
+            1,
+            1
+        ],
+        "end": [
+            189,
+            879,
+            1,
+            1
+        ],
         "next": [
             "03外出__寺庙",
             "03外出__右移2"
-            
         ]
     },
-
     "03外出__寺庙": {
-        "recognition": "OCR",           
-        "expected": "寺庙",             
-        "action": "Click",              
+        "recognition": "OCR",
+        "expected": "寺庙",
+        "action": "Click",
         "next": [
             "03寺庙__抽签"
         ]
     },
-
     "03寺庙__抽签": {
-        "recognition": "OCR",           
-        "expected": "抽签",             
+        "recognition": "OCR",
+        "expected": "抽签",
         "action": "Click",
         "post_delay": 1500,
         "next": [
             "03寺庙__抽签__点击触发"
         ]
     },
-
-    "03寺庙__抽签__点击触发": {                      
+    "03寺庙__抽签__点击触发": {
         "action": "Click",
-        "target": [316,628,99,104],
-        "post_delay":8000,
+        "target": [
+            316,
+            628,
+            99,
+            104
+        ],
+        "post_delay": 8000,
         "next": [
             "03寺庙__抽签_blank"
         ]
     },
-    
-
-    "03寺庙__抽签_blank": {                      
+    "03寺庙__抽签_blank": {
         "action": "Click",
-        "target": [186,581,67,48],            
+        "target": [
+            186,
+            581,
+            67,
+            48
+        ],
         "next": [
             "03寺庙__返回"
         ]
     },
-
     "03寺庙__返回": {
         "recognition": "TemplateMatch",
-        "template" : "03寺庙_返回.png",
-        "roi" : [46,38,116,77],                        
-        "action": "Click",              
+        "template": "03寺庙_返回.png",
+        "roi": [
+            46,
+            38,
+            116,
+            77
+        ],
+        "action": "Click",
         "next": [
             "03外出__左移"
         ]
     },
-
-    "03外出__左移": { 
+    "03外出__左移": {
         "recognition": "OCR",
-        "expected" : "夏冰的家",                     
+        "expected": "夏冰的家",
         "action": "Swipe",
-        "begin" : [255,779,1,1],
-        "end" : [437,778,1,1],
+        "begin": [
+            255,
+            779,
+            1,
+            1
+        ],
+        "end": [
+            437,
+            778,
+            1,
+            1
+        ],
         "next": [
             "03外出__左移2"
         ]
     },
-
-    "03外出__左移2": {                      
+    "03外出__左移2": {
         "action": "Swipe",
-        "begin" : [238,841,1,1],
-        "end" : [443,838,1,1],
+        "begin": [
+            238,
+            841,
+            1,
+            1
+        ],
+        "end": [
+            443,
+            838,
+            1,
+            1
+        ],
         "next": [
             "03外出__返回",
             "03外出__左移2"
-           
         ]
     },
-
     "03外出__返回": {
         "recognition": "OCR",
-        "expected" : "巅峰之塔",
-        "target":[35,55,64,49],                        
+        "expected": "巅峰之塔",
+        "target": [
+            35,
+            55,
+            64,
+            49
+        ],
         "action": "Click",
-        "post_delay": 3000,              
+        "post_delay": 3000,
         "next": [
             "03City__Complete"
         ]
     },
-
-    "03City__Complete": {                           
-        "next": [
-            
-        ]
+    "03City__Complete": {
+        "next": []
     }
-    
-
-
 }
