@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD033 MD041 -->
-
+【停止维护更新】
 
 0. 使用右上角 `Use this template` - `Create a new repository` 来基于本模板创建您自己的项目。
 1. 完整克隆本项目及子项目（地址请修改为您基于本模板创建的新项目地址）。
